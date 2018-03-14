@@ -1,19 +1,17 @@
-function progress(){
-    var prg =document.getElementById('progress');
-    var percent = document.getElementById('percentCount');
-    var counter = 5;
-    var progress = 25;
-    var id = setInterval(frame, 65);
+(function(){
+var preload = document.getElementById("preload");
+var loading =0;
+var id = setInterval(frame, 64);
 
-    function frame(){
-        if(progress == 500 && counter == 100){
-            clearInterval(id);
-        }else{
-            progress +=5;
-            counter +=1;
-            prg.style.width = progress + 'px';
-            percent.innerHTML = counter +'%';
+function frame(){
+    if(loading == 100){
+        clearInterval(id);
+        window.open("../../home.html","_self");
+    }else{
+        loading = loading + 1;
+        if(loading == 90) {
+            preload.style.animation = "fadeout ls ease";
         }
     }
 }
-progress();
+})();
