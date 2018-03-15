@@ -1,4 +1,13 @@
 <?php
+
+if(isset($_POST['submit']))
+{
+    $name=$_POST['name'];
+    $id=$_POST['id'];
+    $email=$_POST['email'];
+    $pasword=$_POST['psswd'];
+    $password=$_POST['pswd'];
+
 $target_Folder = "img/";
 
 $uid = $_POST['id'];
@@ -25,9 +34,9 @@ $savepath = $target_Path.basename( $_FILES['uploadimage']['name'] );
             echo "Failed to connect to database" .     mysqli_connect_errno();
         }
 
-        $sql = "INSERT INTO image (id,image, image_name)
-                    VALUES     ('','$target_Folder$file_name','$file_name') ";
-
+        $sql = "INSERT INTO users (id,name,email,password,image, image_name)
+                    VALUES     ('$id','$name','$email','$password','$target_Folder$file_name','$file_name') ";
+    }
         if (!mysqli_query($con,$sql))
         {
             die('Error: ' . mysqli_error($con));
