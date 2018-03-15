@@ -1,5 +1,5 @@
 <?php
-$target_Folder = "upload/";
+$target_Folder = "img/";
 
 $uid = $_POST['id'];
 
@@ -17,7 +17,7 @@ $savepath = $target_Path.basename( $_FILES['uploadimage']['name'] );
     {
 
         // Database 
-    con=mysqli_connect("localhost","user_name","password","database_name"); //Change it if required
+    $con=mysqli_connect("localhost","root","","data"); //Change it if required
 
 //Check Connection
         if(mysqli_connect_errno())
