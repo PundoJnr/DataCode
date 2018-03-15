@@ -21,7 +21,7 @@
   </nav>
   <!-- Registration Form -->
 
-
+<form method="post" action="upload.php" enctype="multipart/form-data">
 <div class="container-fluid">
     <section class=" jumbotron col-lg-12 container">
 		<div class="container-page">				
@@ -47,17 +47,31 @@
 					<label>Password</label>
 					<input type="password" name="psswd" class="form-control" id="psswd" value="">
 				</div>
-				
+
 				<div class="form-group col-lg-6">
 					<label>Repeat Password</label>
-					<input type="password" name="pswd" class="form-control" id="pswd" value="">
-				</div>			
+          <input type="password" name="pswd" class="form-control" id="pswd" value="">
+          
+        </div>			
 
+<!--
         <div class="form-group col-lg-6">
            <label for="file">Upload Photo</label>
-           <input type="file" class="form-control-file" id="file">
+           <input type="file" class="form-control-file" id="file"><br>
+           <button class="btn btn-default">Upload</button>
         </div>
-          
+-->    
+
+
+<label>Choose File to Upload:</label><br />
+
+<input type="hidden" name="id" />
+
+<input type="file" name="uploadimage" /><br />
+
+<input class="btn btn-primary" type="submit" value="upload" />
+
+
 							
 			
 			</div>
@@ -81,10 +95,12 @@
 				<button type="submit" class="btn btn-warning">Register</button>
 			</div>
 		</div>
-	</section>
+  </section>
 </div>
+</form>
+
 <footer class="navbar container " style="background-color: purple;">
-    <div style="color:orange;"> &copy; 2018 </div>
+    <div style="color:orange"> &copy; 2018 </div>
 </footer>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
