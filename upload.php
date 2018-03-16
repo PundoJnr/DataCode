@@ -22,16 +22,14 @@ $savepath = $target_Path.basename( $_FILES['uploadimage']['name'] );
         //check connection
         if($con === false){
             die("Couldnt connect." . mysqli_connect_error());
-        }else{
-            echo"successful connection";
         }
         $names = mysqli_real_escape_string($con, $_REQUEST['name']);
         $id = mysqli_real_escape_string($con, $_REQUEST['id']);
         $email = mysqli_real_escape_string($con, $_REQUEST['email']);
         $password = mysqli_real_escape_string($con,$_REQUEST ['psswd']);
         
-        $sql = "INSERT INTO users (names,id,email,pasword,image, image_name)
-                    VALUES('$names','$id','$email','$password','$target_Folder$file_name','$file_name')";
+        $sql = "INSERT INTO users (Id_number,names,email,pasword,image, image_name)
+                    VALUES('$id','$names','$email','$password','$target_Folder$file_name','$file_name')";
 
         if(mysqli_query($con,$sql)){
             echo "Successful Registration";
@@ -42,5 +40,6 @@ $savepath = $target_Path.basename( $_FILES['uploadimage']['name'] );
             //move to upload folder
             move_uploaded_file( $_FILES['uploadimage']['tmp_name'],     $target_Path );
 
+          
     } 
 ?>
