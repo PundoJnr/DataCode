@@ -35,7 +35,7 @@
         
         <div class="form-group col-lg-6">
             <label>ID Number</label>
-            <input type="text" name="id" class="form-control" id="id" value="" required="">
+            <input type="number" name="id" class="form-control" id="id" value="" required="">
           </div>
           
           <div class="form-group col-lg-6">
@@ -48,28 +48,13 @@
 					<input type="password" name="psswd" class="form-control" id="psswd" value="">
 				</div>
 
-				<div class="form-group col-lg-6">
-					<label>Repeat Password</label>
-          <input type="password" name="pswd" class="form-control" id="pswd" value="">
-          
-        </div>			
+<br />
+<label>Upload image:</label>
 
-<!--
-        <div class="form-group col-lg-6">
-           <label for="file">Upload Photo</label>
-           <input type="file" class="form-control-file" id="file"><br>
-           <button class="btn btn-default">Upload</button>
-        </div>
--->    
-
-
-<label>Choose File to Upload:</label><br />
-
-<input type="hidden" name="id" />
+<input type="hidden" name="ids" />
 
 <input type="file" name="uploadimage" /><br />
 
-<input class="btn btn-primary" type="submit" value="upload" />
 
 
 							
@@ -92,14 +77,15 @@
 					Acceptance of a user by us dependent on your frequent usage of our software. 
 				</p>
 				
-				<button type="submit" class="btn btn-warning">Register</button>
+				
+  <input class="btn btn-warning" type="submit" value="REGISTER" />
 			</div>
 		</div>
   </section>
 </div>
 </form>
 
-<footer class="navbar container " style="background-color: purple;">
+<footer id="footer" class="navbar container " style="background-color: purple;">
     <div style="color:orange"> &copy; 2018 </div>
 </footer>
     <!-- Optional JavaScript -->
