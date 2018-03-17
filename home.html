@@ -19,9 +19,9 @@
 </head>
   <body class="container">
       <!-- As a link -->
-<nav style="background:purple;" class="navbar ">
-    <a class="navbar-brand" href="home.html" style="color:orange;">Data-Code</a>
-  </nav>
+  <nav style="background:purple;" class="navbar ">
+      <a class="navbar-brand" href="home.html" style="color:orange;">Data-Code</a>
+    </nav>
   <!-- Registration Form -->
 
 <form method="post" action="upload.php" enctype="multipart/form-data">
@@ -48,10 +48,10 @@
 
 				<div class="form-group col-lg-6">
 					<label>Password <i class="fas fa-key"></i> :</label>
-					<input type="password" name="psswd" class="form-control" id="psswd" value="">
+					<input type="password" name="psswd" class="form-control" id="psswd" value=""><br> 
 				</div>
-        <div>
-          <label>Upload image:</label>
+        <div class="form-group col-lg-6">
+          <label>Upload image <i class="fas fa-image"></i>:</label><br>
           <input type="hidden" name="ids" />
           <input type="file" name="uploadimage" /><br />
         </div>
@@ -62,7 +62,7 @@
 			</div>
 		
 			<div class="col-md-6">
-				<h3 class="dark-grey">Terms and Conditions</h3>
+				<h3 class="dark-grey"><strong>Terms and Conditions</strong></h3>
 				<p>
 					By clicking on "Register" you agree to Data-Code's Terms and Conditions
 				</p>
