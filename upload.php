@@ -39,7 +39,9 @@ $savepath = $target_Path.basename( $_FILES['uploadimage']['name'] );
 
             //move to upload folder
             move_uploaded_file( $_FILES['uploadimage']['tmp_name'],     $target_Path );
+   
+            header("location:succes.html");
 
-          
+
     } 
 ?>
