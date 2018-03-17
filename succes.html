@@ -8,7 +8,9 @@
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
     <script src="main.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-
+    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/solid.js" integrity="sha384-+Ga2s7YBbhOD6nie0DzrZpJes+b2K1xkpKxTFFcx59QmVPaSA8c7pycsNaFwUK6l" crossorigin="anonymous"></script>
+<script defer src="https://use.fontawesome.com/releases/v5.0.8/js/fontawesome.js" integrity="sha384-7ox8Q2yzO/uWircfojVuCQOZl+ZZBg2D2J5nkpLqzH1HY0C1dHlTKIbpRz/LG23c" crossorigin="anonymous"></script>
+<script defer src="js/src/fontawesome.all.js"></script>  
 </head>
 <body class="container">
 <nav style="background:purple;" class="text-center navbar ">
@@ -16,12 +18,12 @@
 </nav>
 <br>
 <br>
-    <form class="jumbotron text-center">
-<p>Successfully Registered to view your profile,</p>
+    <form class="jumbotron text-center" method="post" action="success.php">
+        <p><i class="fas fa-check"> </i> You have successfully registered, to view profile</p>
         <p>Enter Id Number: </p> <br>
         <input type="text" name="id" required=""> <br> <br>
 
-        <input type="submit" class="btn btn-warning">
+        <input type="submit" class="btn btn-warning" value="Profile">
     </form>
 
 
