@@ -13,7 +13,10 @@
   <link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
   <script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
   <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
-  </head>
+<script defer src="https://use.fontawesome.com/releases/v5.0.8/js/solid.js" integrity="sha384-+Ga2s7YBbhOD6nie0DzrZpJes+b2K1xkpKxTFFcx59QmVPaSA8c7pycsNaFwUK6l" crossorigin="anonymous"></script>
+<script defer src="https://use.fontawesome.com/releases/v5.0.8/js/fontawesome.js" integrity="sha384-7ox8Q2yzO/uWircfojVuCQOZl+ZZBg2D2J5nkpLqzH1HY0C1dHlTKIbpRz/LG23c" crossorigin="anonymous"></script>
+<script defer src="js/src/fontawesome.all.js"></script>  
+</head>
   <body class="container">
       <!-- As a link -->
 <nav style="background:purple;" class="navbar ">
@@ -29,32 +32,29 @@
 				<h3 class="dark-grey">Registration</h3>
 				
 				<div class="form-group col-lg-12">
-					<label>Full Name</label>
+					<label>Full Name  <i class="fas fa-user"></i> :</label>
 					<input type="text" name="name" class="form-control" id="name" value="" required="">
         </div>
         
         <div class="form-group col-lg-6">
-            <label>ID Number</label>
+            <label>ID Number <i class="fas fa-id-card"></i> :</label>
             <input type="number" name="id" class="form-control" id="id" value="" required="">
           </div>
           
           <div class="form-group col-lg-6">
-            <label>Email Address</label>
+            <label>Email Address <i class="fas fa-envelope"></i> :</label>
             <input type="email" name="email" class="form-control" id="email" value="">
           </div>
 
 				<div class="form-group col-lg-6">
-					<label>Password</label>
+					<label>Password <i class="fas fa-key"></i> :</label>
 					<input type="password" name="psswd" class="form-control" id="psswd" value="">
 				</div>
-
-<br />
-<label>Upload image:</label>
-
-<input type="hidden" name="ids" />
-
-<input type="file" name="uploadimage" /><br />
-
+        <div>
+          <label>Upload image:</label>
+          <input type="hidden" name="ids" />
+          <input type="file" name="uploadimage" /><br />
+        </div>
 
 
 							
