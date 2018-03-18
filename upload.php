@@ -18,7 +18,7 @@ $savepath = $target_Path.basename( $_FILES['uploadimage']['name'] );
     {
         
         //connect
-        $con = mysqli_connect("localhost", "root", "", "data");
+        $con = mysqli_connect("localhost", "root", "", "datacode");
         //check connection
         if($con === false){
             die("Couldnt connect." . mysqli_connect_error());

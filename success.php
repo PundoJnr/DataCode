@@ -1,6 +1,6 @@
 <?php
     //connect
-    $conn = mysqli_connect('localhost','root','','data');
+    $conn = mysqli_connect('localhost','root','','datacode');
 
     if($conn == false){
         die ("no connection" .mysql_connect_error());
