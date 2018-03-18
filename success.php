@@ -1,12 +1,13 @@
 <?php
     //connect
-    $conn = mysqli_connect('localhost','root','','data');
+    $conn = mysqli_connect('localhost','leja567_brianokinyi','ZP97v3[GjqRT','leja567_datacode');
 
     if($conn == false){
         die ("no connection" .mysql_connect_error());
     }
 
     $id = mysqli_real_escape_string($conn, $_REQUEST['id']);
+    $id = $_GET['ref'];
 
     //get data
     $sql = "SELECT * FROM users WHERE Id_number = '$id'";
@@ -44,16 +45,17 @@
 
     <div class="container text-center jumbotron">
         <div class="">
-            <div><img src="img/<?php echo $row['image_name'] ?>" alt="No Image" class="rounded-circle" width="200px" height="200px"></div>
+            <div><img src="<?php echo $row['image'] ?>" alt="No Image" class="rounded-circle" width="200px" height="200px"></div>
         </div>
         <div>
             <h4><?php echo $row['names'] ?></h4>
-            <p>ID:  <i class="fas fa-id-card"></i> <?php echo $row['Id_number'] ?></p>
-            <p>Email:  <i class="fas fa-envelope"></i> <?php echo $row['email'] ?></p>
+            <p>
+                Name:  <i class="fas fa-user"></i> <?php echo $row['names'] ?>  </br>
+                ID:  <i class="fas fa-id-card"></i> <?php echo $row['Id_number'] ?> <br>
+                Designation:  <i class="fas fa-briefcase"></i> <?php echo $row['desig'] ?></br>
+                PF Number:  <i class="fas fa-user"></i> <?php echo $row['pf_no'] ?></br>
             <p>
                 <?php
-                    $text = "$row[Id_number] $row[names] $row[email]";
-                    $text = "poline";
                     $code ="Code128";
                     $orientation = "horizontal";
                     $print = true;
@@ -62,7 +64,7 @@
                         '<img 
                             class="barcode" 
                             alt="Barcode" 
-                            src="barcode.php?text='.$row['names'].$row['Id_number'].'&codetype='.$code.'&orientation='.$orientation.'&size='.$size.'&print='.$print.'"/>';
+                            src="barcode.php?text='.$row['pf_no'].'&codetype='.$code.'&orientation='.$orientation.'&size='.$size.'&print='.$print.'"/>';
                 ?>
             </p>
         </div>
